@@ -1,0 +1,6 @@
+framework module Pods_PhotoBlock {
+  umbrella header "Pods-PhotoBlock-umbrella.h"
+
+  export *
+  module * { export * }
+}

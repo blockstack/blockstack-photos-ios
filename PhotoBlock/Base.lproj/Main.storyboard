@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="PhotoBlock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P H O T O B L O C K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJu-JJ-PES">
+                                <rect key="frame" x="95.5" y="324" width="223.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save a photo to your own private cloud." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vX-XG-CrK">
+                                <rect key="frame" x="87" y="367.5" width="240" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Y3q-G4-KqF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuI-Mh-Npc">
+                                <rect key="frame" x="102" y="510.5" width="210" height="50"/>
+                                <color key="backgroundColor" red="0.17910882830619812" green="0.0209782924503088" blue="0.8824123740196228" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SWO-CC-iqk"/>
+                                    <constraint firstAttribute="width" constant="210" id="oEI-Yy-T8K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Log in with Blockstack">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8A-hT-l9Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OJu-JJ-PES" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.75" id="LnM-9q-93V"/>
+                            <constraint firstItem="TuI-Mh-Npc" firstAttribute="top" secondItem="2vX-XG-CrK" secondAttribute="bottom" constant="100" id="M71-PT-cea"/>
+                            <constraint firstItem="OJu-JJ-PES" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RLB-yE-KDP"/>
+                            <constraint firstItem="2vX-XG-CrK" firstAttribute="centerX" secondItem="OJu-JJ-PES" secondAttribute="centerX" id="a1J-bl-W9R"/>
+                            <constraint firstItem="TuI-Mh-Npc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eGb-6Z-Ngf"/>
+                            <constraint firstItem="2vX-XG-CrK" firstAttribute="top" secondItem="OJu-JJ-PES" secondAttribute="bottom" constant="12" id="zG2-uc-68z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="1rp-8r-Wau">
+            <objects>
+                <viewController storyboardIdentifier="Photo" id="Zct-yL-qKJ" customClass="PhotoViewController" customModule="PhotoBlock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhz-Pv-Yzj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P H O T O B L O C K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODB-uf-BH9">
+                                <rect key="frame" x="130" y="64" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY3-mD-XPj">
+                                <rect key="frame" x="0.0" y="104" width="414" height="0.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="9ye-KQ-5iY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1e-HO-IdC">
+                                <rect key="frame" x="117" y="653" width="180" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HZx-wV-Zl2"/>
+                                    <constraint firstAttribute="width" constant="180" id="KQR-ML-sI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="+ upload new photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="photoActionTapped:" destination="Zct-yL-qKJ" eventType="touchUpInside" id="jMf-sj-MLI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a photo to save it in your decentralized Gaia storage." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ve-cL-cfg">
+                                <rect key="frame" x="47" y="203" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Xhy-vK-QrV"/>
+                                    <constraint firstAttribute="height" constant="50" id="yj3-yB-ue2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Un-bM-zRk">
+                                <rect key="frame" x="47" y="293" width="320" height="320"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2w-1E-Mw3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="O2w-1E-Mw3" secondAttribute="height" multiplier="1:1" id="SRi-At-Tjt"/>
+                                            <constraint firstAttribute="width" constant="320" id="nLB-UM-8Ar"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6h-1M-ePG">
+                                        <rect key="frame" x="40" y="96" width="240" height="128"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Enr-rn-0Pu">
+                                                <rect key="frame" x="110" y="41.5" width="20" height="20"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking for image..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uo-fw-7MN">
+                                                <rect key="frame" x="38.5" y="69.5" width="163" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="8Uo-fw-7MN" firstAttribute="centerX" secondItem="d6h-1M-ePG" secondAttribute="centerX" id="2Eq-cF-V7a"/>
+                                            <constraint firstItem="8Uo-fw-7MN" firstAttribute="centerY" secondItem="d6h-1M-ePG" secondAttribute="centerY" constant="16" id="4Ja-7S-KbV"/>
+                                            <constraint firstItem="Enr-rn-0Pu" firstAttribute="centerX" secondItem="d6h-1M-ePG" secondAttribute="centerX" id="EsI-WI-R5t"/>
+                                            <constraint firstItem="8Uo-fw-7MN" firstAttribute="top" secondItem="Enr-rn-0Pu" secondAttribute="bottom" constant="8" id="K50-U5-RTx"/>
+                                            <constraint firstAttribute="height" constant="128" id="eSV-mA-IIU"/>
+                                            <constraint firstAttribute="width" constant="240" id="x6F-BX-2ta"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94083784770000001" green="0.94083784770000001" blue="0.94083784770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="d6h-1M-ePG" firstAttribute="centerX" secondItem="4Un-bM-zRk" secondAttribute="centerX" id="Ej8-fC-rPo"/>
+                                    <constraint firstAttribute="width" constant="320" id="FTX-ax-aqy"/>
+                                    <constraint firstAttribute="width" secondItem="4Un-bM-zRk" secondAttribute="height" multiplier="1:1" id="MER-iO-rQ8"/>
+                                    <constraint firstItem="d6h-1M-ePG" firstAttribute="centerY" secondItem="4Un-bM-zRk" secondAttribute="centerY" id="Skr-Ss-zae"/>
+                                    <constraint firstItem="O2w-1E-Mw3" firstAttribute="centerX" secondItem="4Un-bM-zRk" secondAttribute="centerX" id="X48-d1-jWq"/>
+                                    <constraint firstItem="O2w-1E-Mw3" firstAttribute="centerY" secondItem="4Un-bM-zRk" secondAttribute="centerY" id="koA-6t-rrQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NY3-mD-XPj" firstAttribute="centerX" secondItem="u5k-42-aSZ" secondAttribute="centerX" id="3uq-Sv-tge"/>
+                            <constraint firstItem="4Un-bM-zRk" firstAttribute="top" secondItem="3Ve-cL-cfg" secondAttribute="bottom" constant="40" id="A9e-3B-bwv"/>
+                            <constraint firstItem="4Un-bM-zRk" firstAttribute="centerY" secondItem="u5k-42-aSZ" secondAttribute="centerY" id="DrH-jz-Ki5"/>
+                            <constraint firstItem="NY3-mD-XPj" firstAttribute="width" secondItem="nhz-Pv-Yzj" secondAttribute="width" id="JBU-xu-veu"/>
+                            <constraint firstItem="4Un-bM-zRk" firstAttribute="centerX" secondItem="u5k-42-aSZ" secondAttribute="centerX" id="KIe-Rx-ZUs"/>
+                            <constraint firstItem="V1e-HO-IdC" firstAttribute="top" secondItem="4Un-bM-zRk" secondAttribute="bottom" constant="40" id="Rb8-Id-oTX"/>
+                            <constraint firstItem="V1e-HO-IdC" firstAttribute="centerX" secondItem="u5k-42-aSZ" secondAttribute="centerX" id="WiB-2N-3Wz"/>
+                            <constraint firstItem="NY3-mD-XPj" firstAttribute="top" secondItem="u5k-42-aSZ" secondAttribute="top" constant="60" id="adK-hz-qcb"/>
+                            <constraint firstItem="ODB-uf-BH9" firstAttribute="centerX" secondItem="u5k-42-aSZ" secondAttribute="centerX" id="iTF-Ie-Naq"/>
+                            <constraint firstItem="ODB-uf-BH9" firstAttribute="top" secondItem="u5k-42-aSZ" secondAttribute="top" constant="20" id="kLh-r8-F5S"/>
+                            <constraint firstItem="3Ve-cL-cfg" firstAttribute="centerX" secondItem="u5k-42-aSZ" secondAttribute="centerX" id="sM3-iF-gs1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u5k-42-aSZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="O2w-1E-Mw3" id="tvl-ci-QvY"/>
+                        <outlet property="loadingView" destination="d6h-1M-ePG" id="X6t-mv-ad0"/>
+                        <outlet property="uploadPhotoButton" destination="V1e-HO-IdC" id="j1d-8h-WwS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBP-mT-3vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
