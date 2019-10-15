@@ -23,17 +23,20 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         
         self.loadingView.isHidden = false
-        Blockstack.shared.getFile(at: filename, decrypt: true) {
+        Blockstack.shared.getFile(at: "dlkfjsdfldksjf", decrypt: true) {
             decryptedContent, error in
             self.loadingView.isHidden = true
             guard error == nil else {
+                if (error as? GaiaError) == .itemNotFoundError {
+                    return
+                }
                 let error = UIAlertController(title: "Oops!", message: "Something went wrong. Check your internet connection and try again.", preferredStyle: .alert)
                 error.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(error, animated: true, completion: nil)
                 return
             }
             guard let bytes = (decryptedContent as? DecryptedValue)?.bytes else {
-                let alert = UIAlertController(title: nil, message: "Nothing found. Try uploading something!", preferredStyle: .alert)
+                let alert = UIAlertController(title: nil, message: "Could not decrypt content. Try uploading a new file.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 return
