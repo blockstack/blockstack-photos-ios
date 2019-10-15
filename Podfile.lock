@@ -1,5 +1,5 @@
 PODS:
-  - Blockstack (0.7.2):
+  - Blockstack (1.0.0):
     - CryptoSwift (= 0.15.0)
     - PromisesSwift
     - STRegex
@@ -21,7 +21,7 @@ SPEC REPOS:
     - STRegex
 
 SPEC CHECKSUMS:
-  Blockstack: e8bc8f2c871cf5349d543f8594febb04391a2adb
+  Blockstack: 32035ca9825cdd8c6ac89f9f79b69138a12504e7
   CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
